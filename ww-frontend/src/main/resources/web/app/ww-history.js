@@ -45,14 +45,13 @@ class WwHistory extends LitElement {
             "message": "get"
         };
         var hostnameBase = window.location.hostname.split(".").slice(1).join(".");
-        this.ajax.open("POST", "https://advisor-history-wealthwise." + hostnameBase + "/getHistory", true);
-        this.ajax.setRequestHeader("Content-Type", "application/json");
-        this.ajax.send(JSON.stringify(data));
+        this.ajax.open("GET", "https://advisor-history-wealthwise." + hostnameBase + "/getHistory", true);
+        this.ajax.send();
     }
 
     onAjaxLoad() {
         this._inprogress = false;
-        this._history = JSON.parse(this.ajax.responseText).message;
+        this._history = JSON.parse(this.ajax.responseText).messages;
     }
         
     render(){

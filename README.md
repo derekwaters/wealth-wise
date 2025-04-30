@@ -32,9 +32,9 @@ Use KNative CLI to build and push all of the serverless container images to your
 kn func build --path advisor-history --builder s2i --image quay.io/<your-quay-account>/ww-advisor-history:latest --push
 kn func build --path financial-advisor --builder s2i --image quay.io/<your-quay-account>/ww-financial-advisor:latest --push
 kn func build --path investment-advisor --builder s2i --image quay.io/<your-quay-account>/ww-investment-advisor:latest --push
-kn func build --path ww-frontend --builder s2i --image quay.io/<your-quay-account>ww-frontend:latest --push
-kn func build --path add-history --builder s2i --image quay.io/<your-quay-account>ww-add-history:latest --push
-```
+kn func build --path ww-frontend --builder s2i --image quay.io/<your-quay-account>/ww-frontend:latest --push
+kn func build --path add-history --builder s2i --image quay.io/<your-quay-account>/ww-add-history:latest --push
+````
 
 ### Create a dedicated project for your serverless workloads
 
